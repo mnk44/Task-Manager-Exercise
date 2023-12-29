@@ -1,4 +1,13 @@
-import { HomeComponent } from './app/components/home/home.component';
 import { bootstrapApplication } from '@angular/platform-browser';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideRouter } from '@angular/router';
 
-bootstrapApplication(HomeComponent).catch(err => console.error(err));
+import { MainComponent } from './app/components/main/main.component';
+import { routes } from './app/app-routing.module';
+
+bootstrapApplication(MainComponent, {
+  providers: [
+    provideAnimations(),
+    provideRouter(routes)
+  ] 
+}).catch(err => console.error(err));
