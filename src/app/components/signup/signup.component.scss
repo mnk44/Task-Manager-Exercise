@@ -6,7 +6,7 @@
     max-width: min-content;
 }
 
-.login-form {
+.sign-up-form {
     text-align: center;
     min-width: 50vh;
 }
@@ -36,32 +36,17 @@ button:hover {
     background-color: #1D689A;
 }
 
-.forgot-password{
-    font-size: small;
-    text-align: left;
-}
-
-.forgot-password a{
-    color: #3498DB;
-    text-decoration: none;
-}
-
-.forgot-password a:hover {
-    text-decoration: underline;
-    color: #1D689A;
-}
-
-.sign-up {
+.log-in {
     margin-top: 10px;
     font-size: small;
 }
 
-.sign-up a {
+.log-in a {
     color: #3498DB;
     text-decoration: none;
 }
 
-.sign-up a:hover {
+.log-in a:hover {
     text-decoration: underline;
     color: #1D689A;
 }
