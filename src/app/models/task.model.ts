@@ -2,8 +2,8 @@ export interface Task {
     id?: any;
     title?: string;
     description?: string;
-    creation_date?: any;
-    finish_date?: any;
+    creation_date?: Date;
+    finish_date?: Date;
     state?: string;
     user?: number;
 }
