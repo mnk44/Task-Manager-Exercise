@@ -9,16 +9,21 @@ export class LocalStorage {
     idUser: number;
     newUser!: User;
 
-    constructor(){
+    constructor() {
         this.idUser = 0;
     }
 
     recordNewUser(email: string, user_name: string, password: string){
-        this.newUser.id = this.idUser;
-        this.newUser.email = email;
-        this.newUser.user_name = user_name;
-        this.newUser.password = password;
+        this.newUser = {
+            id: this.idUser,
+            email: email,
+            user_name: user_name,
+            password: password
+        }
 
-        localStorage.setItem( "user", JSON.stringify(this.newUser));
+        localStorage.setItem( email, JSON.stringify(this.newUser));
+
+        this.idUser++;
+        console.log(this.idUser);
     }
 }

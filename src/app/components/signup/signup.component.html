@@ -1,11 +1,11 @@
 <div class="container">
-    <form class="sign-up-form">
+    <form class="sign-up-form" autocomplete="off">
 
-        <input type="email" id="user-email" placeholder="Correo electrónico" required style="margin-top: 25px !important;">
-        <input type="text" id="nick-name" placeholder="Nombre de usuario" required style="margin-top: 16px !important;">
-        <input type="password" id="password" placeholder="Contraseña" required style="margin-top: 16px !important;">
+        <input type="email" [(ngModel)]="email" name="user-email" placeholder="Correo electrónico" required style="margin-top: 25px !important;">
+        <input type="text" [(ngModel)]="userName" name="nick-name" placeholder="Nombre de usuario" required style="margin-top: 16px !important;">
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña" required style="margin-top: 16px !important;">
 
-        <button type="submit" id="sign-up">Crear cuenta</button>
+        <button type="submit" id="sign-up" (click)="createUser()">Crear cuenta</button>
         <p class="log-in">¿Ya tienes una cuenta? <a href="/home">Inicia sesión</a></p>
     </form>
 </div>
