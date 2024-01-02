@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { LocalStorage } from 'src/app/services/localstorage.service';
 
 @Component({
