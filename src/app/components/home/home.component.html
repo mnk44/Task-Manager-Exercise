@@ -1,14 +1,16 @@
 <div class="container">
-    <form class="login-form">
+    <form class="login-form" #myForm="ngForm">
         <img class="img-fluid" src="../../../assets/UserIcon.png" alt="User icon">
 
         <h1>Bienvenido</h1>
 
-        <input type="email" id="user-email" placeholder="Correo electrónico" required style="margin-top: 25px !important;">
-        <input type="password" id="password" placeholder="Contraseña" required style="margin-top: 16px !important;">
+        <input type="email" [(ngModel)]="email" name="user-email"
+        email="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+        [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" placeholder="Correo electrónico" required style="margin-top: 25px !important;">
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña" required style="margin-top: 16px !important;">
         <p class="forgot-password"><a href="#">¿Olvidó su contraseña?</a></p>
 
-        <button type="submit" id="log-in">Iniciar sesión</button>
+        <button type="submit" id="log-in" [disabled]="myForm.invalid">Iniciar sesión</button>
         <p class="sign-up">¿No tienes una cuenta? <a href="/signup">Regístrate</a></p>
     </form>
 </div>

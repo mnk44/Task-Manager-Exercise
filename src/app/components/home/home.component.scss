@@ -40,6 +40,12 @@ button:hover {
     background-color: #1D689A;
 }
 
+button:disabled {
+    background-color: #8bb9d7;
+    color: #e1e1e1;
+    cursor: auto;
+}
+
 .forgot-password{
     font-size: small;
     text-align: left;
