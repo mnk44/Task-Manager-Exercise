@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LocalStorage } from 'src/app/services/localstorage.service';
 
@@ -19,6 +19,9 @@ export class SignUpComponent {
   }
 
   createUser(){
-    this.localStorageService.recordNewUser(this.email, this.userName, this.password);
+    let aux = this.localStorageService.recordNewUser(this.email, this.userName, this.password);
+    if(aux != undefined){
+      
+    }
   }
 }
